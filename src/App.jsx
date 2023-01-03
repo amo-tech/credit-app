@@ -3,7 +3,16 @@ import { useState } from "react";
 export const App = () => {
   const radioCollection = ["shime", "kaomi"];
   const [borrowed, setBorrowed] = useState("kaomi");
-  const onChange = (e) => setBorrowed(e.target.value);
+  const onChangePerson = (e) => setBorrowed(e.target.value);
+
+  const [val, setVal]= useState("");
+  const inputText = (e) => {
+    setVal(e.target.value);
+  }
+
+  const confirmContent = () => {
+    console.log(val)
+  };
 
   return (
     <>
@@ -16,7 +25,7 @@ export const App = () => {
               type="radio"
               value={value}
               checked={borrowed === value}
-              onChange={onChange}
+              onChange={onChangePerson}
             >
             </input>
             {value}
@@ -24,14 +33,21 @@ export const App = () => {
         )
       })}
       <br/>
-      <input type="textarea"></input>
-      {/* ここに書いたものをconsolelognに出力させる */}
+
+      <input 
+        placeholder="How much"
+        value={val}
+        onChange={inputText}
+      />
+
+      <button onClick={confirmContent}>
+        OK
+      </button>
 
 
 
-
-      <h2>history</h2>
-      <button>しめかわいに切り替える</button>
+      <h2>List</h2>
+      <button>精算</button>
 
     </>
   )
