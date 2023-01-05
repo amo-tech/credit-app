@@ -1,9 +1,8 @@
 import { useState } from "react";
+import {Form} from "./components/Form";
 
 export const App = () => {
-  const radioCollection = ["shime", "kaomi"];
-  const [borrowed, setBorrowed] = useState("kaomi");
-  const onChangePerson = (e) => setBorrowed(e.target.value);
+  
 
   const [val, setVal] = useState("");
   const inputText = (e) => {
@@ -30,21 +29,8 @@ export const App = () => {
   return (
     <>
       <h1>credit</h1>
-
-      {radioCollection.map((value) => {
-        return (
-          <label key={value}>
-            <input
-              type="radio"
-              value={value}
-              checked={borrowed === value}
-              onChange={onChangePerson}
-            >
-            </input>
-            {value}
-          </label>
-        )
-      })}
+      <Form />
+      
       <br />
 
       <form onSubmit={addCredit}>
