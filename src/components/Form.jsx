@@ -4,8 +4,8 @@ import { useState } from "react";
 
 export const Form = () => {
 
-    const radioCollection = ["shime", "kaomi"];
-    const [borrowed, setBorrowed] = useState("kaomi");
+    const radioCollection = ["shime", "kyomu"];
+    const [borrowed, setBorrowed] = useState("kyomu");
     const onChangePerson = (e) => setBorrowed(e.target.value);
     return (
       <>
@@ -20,7 +20,7 @@ export const Form = () => {
                             onChange={onChangePerson}
                         >
                         </input>
-                        {value}
+                        I am {value}
                     </label>
                 )
             })
