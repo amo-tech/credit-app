@@ -1,8 +1,14 @@
-// import React from "react";
+import React from "react";
 // import { useState } from "react";
 
 
-// export const List = () => {
+export const List = () => {
+
+  const settlement = () => {
+    return(
+      console.log("settlement")
+    )
+  };
 
 //   const [val, setVal] = useState("");
 //   const inputText = (e) => {
@@ -12,16 +18,16 @@
 //     setVal([...val, val]);
 //   };
 
-//   return (
-//     <>
-//       <button>精算</button>
-//       {createVal.map((credit) => {
-//         return (
-//           <div key={credit}>
+  return (
+    <>
+      <button onClick={settlement}>精算</button>
+      {/* {createVal.map((credit) => {
+        return (
+          <div key={credit}>
 
-//           </div>
-//         )
-//       })}
-//     </>
-//   )
-// };
+          </div>
+        )
+      })} */}
+    </>
+  )
+};

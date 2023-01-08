@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { AmountOfMoney } from "./components/amountOfMoney";
 import { Form } from "./components/Form";
-// import { List } from "./components/List";
+import { List } from "./components/List";
 
 export const App = () => {
   
@@ -14,7 +14,7 @@ export const App = () => {
       <AmountOfMoney />
 
       <h2>List</h2>
-      {/* <List /> */}
+      <List />
     </>
   )
 };
