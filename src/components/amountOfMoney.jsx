@@ -32,6 +32,7 @@ export const AmountOfMoney = () => {
                 value={val}
                 onChange={inputText}
             />
+            {/* コンボボックスにする？ */}
             <button onClick={confirmContent}>
                 OK
             </button>

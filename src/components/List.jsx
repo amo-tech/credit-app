@@ -20,6 +20,7 @@ export const List = () => {
 
   return (
     <>
+    {/* 動画見る */}
       <button onClick={settlement}>精算</button>
       {/* {createVal.map((credit) => {
         return (
