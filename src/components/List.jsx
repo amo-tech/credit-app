@@ -28,6 +28,7 @@ export const List = () => {
 
   return (
     <>
+    {/* ここ直す、mapについてべんきょうする */}
       {creditList.map((id) => {
         return(
           <div key={id}>
